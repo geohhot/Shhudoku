@@ -1,4 +1,4 @@
-
+#include <unistd.h>
 #include <stdio.h>
 #include <signal.h>
 #include <termios.h>
@@ -126,7 +126,7 @@ void update_screen (void) {
   }
 
   // cn_pos (2, sd.x + 1 + sd.x/3);
-  
+
   fflush (stdout);
 }
 
@@ -162,7 +162,7 @@ void generate_field (void) {
 
     for (j=0; j<9; ++j)
       field[q][j] = tt[j];
-    
+
   }
 }
 
@@ -176,7 +176,7 @@ void init () {
   signal (SIGTERM, handle_sigterm);
 
   generate_field ();
-  
+
   c_eraseScreen ();
   cn_pos (1,1);
   sd.x = 0;
@@ -197,6 +197,6 @@ int main (void) {
     update_screen ();
     usleep (50000L);
   }
-  
+
   return 0;
 }

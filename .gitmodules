@@ -1,0 +1,3 @@
+[submodule "EasyCursorControl"]
+	path = EasyCursorControl
+	url = git@github.com:hingev/EasyCursorControl.git
